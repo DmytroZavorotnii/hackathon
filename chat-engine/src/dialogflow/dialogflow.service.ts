@@ -34,7 +34,7 @@ export class DialogflowService {
             queryInput: {
                 text: {
                     text: message,
-                    languageCode: 'en-US',
+                    languageCode: 'uk-UA',
                 },
             },
         };
