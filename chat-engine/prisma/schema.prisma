@@ -14,8 +14,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  telegramId String  @unique
-  name  String?
+model File {
+  id        String   @id @default(uuid())
+  topic     String   // Тематика файлу
+  filename  String   // ім'я файлу
+  content   String   // base64 content
+  createdAt DateTime @default(now())
 }

@@ -28,13 +28,13 @@ export class DialogflowService {
         );
     }
 
-    public async ask(message: string): Promise<string> {
+    async ask(message: string): Promise<string> {
         const request: google.cloud.dialogflow.v2.IDetectIntentRequest = {
             session: this.sessionPath,
             queryInput: {
                 text: {
                     text: message,
-                    languageCode: 'en-US',
+                    languageCode: 'uk-UA',
                 },
             },
         };

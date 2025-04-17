@@ -33,7 +33,11 @@ enum KafkaGroupNames {
 }
 
 enum KafkaTopics {
-
+    AVAILABLE_TOPICS = 'available.topics',
+    FILE_ALL = 'file.all',
+    FILE_UPLOAD = 'file.upload',
+    FILE_DELETE = 'file.delete',
+    ASK_DIALOGFLOW = 'ask.dialogflow',
 }
 
 export { kafkaConfig, KafkaServiceNames, KafkaClientNames, KafkaGroupNames, KafkaTopics };
