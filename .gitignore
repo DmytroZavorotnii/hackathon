@@ -54,9 +54,15 @@ poetry.lock
 
 volume/
 .env
+
+# Telegram bot test db
 test_db.py
-document-search/chroma_langchain_db/chroma.sqlite3
-document-search/chroma_langchain_db/f0f97b89-6cdd-4341-ad8f-bcb0333c8c0e/data_level0.bin
-document-search/chroma_langchain_db/f0f97b89-6cdd-4341-ad8f-bcb0333c8c0e/header.bin
-document-search/chroma_langchain_db/f0f97b89-6cdd-4341-ad8f-bcb0333c8c0e/length.bin
-document-search/chroma_langchain_db/f0f97b89-6cdd-4341-ad8f-bcb0333c8c0e/link_lists.bin
+
+# Document Search
+chroma_langchain_db/
+
+
+chat-engine/dialog-flow.json
+chat-engine/.eslintrc.js
+/chat-engine/generated
+chat-engine/.prettierrc

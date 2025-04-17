@@ -1,0 +1,7 @@
+nest-cli.json
+package*.json
+tsconfig*.json
+README.md
+
+dist/
+node_modules/
