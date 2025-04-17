@@ -26,3 +26,6 @@ class SearchChain:
             
     def create_summarized_answer(self, user_input):
         return self.rag_chain.invoke({"input": user_input})
+
+    def retrieve_documents(self, user_input):
+        return RETRIEVER.invoke(user_input)

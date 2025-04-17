@@ -5,6 +5,9 @@ from langchain_chroma import Chroma
 from langchain_groq.chat_models import ChatGroq
 from langchain.embeddings import HuggingFaceEmbeddings
 
+DOCS_DIR = "../docs"
+
+os.makedirs(DOCS_DIR, exist_ok=True)
 
 dotenv.load_dotenv()
 
