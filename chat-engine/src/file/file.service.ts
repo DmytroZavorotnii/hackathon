@@ -24,6 +24,14 @@ export class FileService {
             })
         } else return this.prisma.file.findMany()
     }
+
+    async deleteFile(id: string) {
+        return this.prisma.file.delete({
+            where: {
+                id: id,
+            },
+        })
+    }
   
     async uploadFile(topic: string, content: string, filename: string) {
         return await this.prisma.file.create({

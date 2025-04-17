@@ -1,7 +1,7 @@
 import { KafkaTopics } from '@app/config';
 import { IAllFilesMessage, IAskDialogflowMessage, IUploadFileMessage } from '@app/interfaces';
 import { Controller, Logger } from '@nestjs/common';
-import { Ctx, EventPattern, KafkaContext, MessagePattern,  Payload } from '@nestjs/microservices';
+import { MessagePattern,  Payload } from '@nestjs/microservices';
 import { KafkaService } from './kafka.service';
 import { FileService } from 'src/file/file.service';
 
@@ -35,20 +35,21 @@ export class KafkaController {
     }
 
     // ! ADMIN ROLE
-    @EventPattern(KafkaTopics.FILE_UPLOAD)
+    @MessagePattern('file.upload')
     uploadFile(@Payload() message: IUploadFileMessage) {
+        this.logger.debug('uploadFile', JSON.stringify(message));
         return this.fileService.uploadFile(
-            message.topic, 
-            message.content, 
+            message.topic,
+            message.content,
             message.filename
         );
     }
 
     // ! ADMIN ROLE
-    @EventPattern(KafkaTopics.FILE_DELETE)
+    @MessagePattern(KafkaTopics.FILE_DELETE)
     deleteFile(@Payload() message: any) {
         return {
-            message: 'Message received successfully',
+            message: message,
         }
     }
 

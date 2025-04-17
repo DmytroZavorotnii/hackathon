@@ -2,6 +2,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ProducerService } from './producer.service';
 import { DialogflowService } from 'src/dialogflow/dialogflow.service';
+import { KafkaTopics } from '@app/config';
 
 @Injectable()
 export class KafkaService {
@@ -18,11 +19,12 @@ export class KafkaService {
         return response;
     }
 
-    sendMessage() {
-        this.producerService.sendMessage();
+    async sendMessage(topic: KafkaTopics) {
+        this.logger.debug('sendKafkaMessage');
+        await this.producerService.sendMessage(topic);
     }
 
-    emitMessage() {
-        this.producerService.emitMessage();
+    emitMessage(topic: string) {
+        this.producerService.emitMessage(topic);
     }
 }

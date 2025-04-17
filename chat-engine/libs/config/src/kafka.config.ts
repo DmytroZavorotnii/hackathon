@@ -33,9 +33,6 @@ enum KafkaGroupNames {
 }
 
 enum KafkaTopics {
-    TEST_TOPIC = 'test-topic',
-    TEST_EMIT = 'test-emit',
-    GET_SUMMARY = 'get.summary',
     AVAILABLE_TOPICS = 'available.topics',
     FILE_ALL = 'file.all',
     FILE_UPLOAD = 'file.upload',

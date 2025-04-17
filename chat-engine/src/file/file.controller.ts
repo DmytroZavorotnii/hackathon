@@ -22,4 +22,17 @@ export class FileController {
     async uploadFile(@Body() body: IUploadFileMessage) {
         return await this.fileService.uploadFile(body.topic, body.content, body.filename);
     }
+
+    @Get('topics')
+    async topics() {
+        return {
+            topics: [
+                "єВідновлення",
+                "Соціальна підтримка",
+                "ВПО",
+                "Субсидії",
+                "Притулок",
+            ]
+        }
+    }
 }
