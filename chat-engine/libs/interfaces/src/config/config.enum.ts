@@ -1,0 +1,8 @@
+enum EnvironmentEnums {
+    DIALOG_FLOW_CONFIG = 'DIALOG_FLOW_CONFIG',
+    DIALOG_FLOW_ENABLED = 'DIALOG_FLOW_ENABLED',
+    KAFKA_BROKERS = 'KAFKA_BROKERS',
+    SERVICE_PORT = 'SERVICE_PORT',
+}
+
+export { EnvironmentEnums };

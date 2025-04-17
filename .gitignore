@@ -55,3 +55,7 @@ poetry.lock
 volume/
 .env
 test_db.py
+chat-engine/dialog-flow.json
+chat-engine/.eslintrc.js
+/chat-engine/generated
+chat-engine/.prettierrc
