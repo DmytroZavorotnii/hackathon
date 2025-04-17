@@ -16,6 +16,7 @@ psycopg2 = "^2.9.10"
 asyncpg = "^0.30.0"
 sqlalchemy = {extras = ["asyncio"], version = "^2.0.40"}
 psycopg2-binary = "^2.9.10"
+requests = "^2.32.3"
 
 
 [tool.poetry.group.dev.dependencies]
