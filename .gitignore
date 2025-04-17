@@ -1,0 +1,57 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore virtual environment
+.venv/
+env/
+venv/
+
+# Ignore IDE config files
+.idea/
+.vscode/
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore test and coverage files
+*.coverage
+.coverage.*
+nosetests.xml
+pytest.xml
+*.cover
+*.hypothesis/
+
+# Ignore dist and build directories
+dist/
+build/
+*.egg-info/
+
+# Ignore package manager files
+Pipfile.lock
+poetry.lock
+
+# Ignore jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore pyenv settings
+.python-version
+
+# Ignore pyinstaller
+*.spec
+
+# Ignore mypy configuration
+.mypy_cache/
+
+# Ignore tox
+.tox/
+.nox/
+
+volume/
+.env
+test_db.py
